@@ -147,6 +147,9 @@ img{
 
 
 /* -----------content--------------- */
+.container{
+    display: flex;
+}
 .content h1{
     font-style: normal;
     font-family: 'Roboto';
@@ -224,14 +227,17 @@ img{
 .wrapper{
   width: 282px;
   height: 263px;
-  background: #fff;
+  background: rgba(214, 214, 214, 0.25);
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+  margin-top: 84px;
+  margin-left: 30px;
+  margin-bottom: 28px;
 }
 .wrapper header{
   display: flex;
   align-items: center;
-  padding: 25px 30px 10px;
+    padding: 0 10px;
   justify-content: space-between;
 }
 header .icons{
@@ -256,20 +262,14 @@ header .icons span:hover{
   background: #f2f2f2;
 }
 header .current-date{
-  font-size: 24px;
+  font-size: 15px;
   font-weight: 500;
-}
-.calendar{
-  padding: 20px;
 }
 .calendar ul{
   display: flex;
   flex-wrap: wrap;
   list-style: none;
   text-align: center;
-}
-.calendar .days{
-  margin-bottom: 20px;
 }
 .calendar li{
   color: #333;
@@ -280,34 +280,87 @@ header .current-date{
   font-weight: 500;
   cursor: default;
 }
+.calendar .days{
+    margin-left: 15px;
+}
 .calendar .days li{
   z-index: 1;
   cursor: pointer;
   position: relative;
-  margin-top: 30px;
+  margin-top: 20px;
+
 }
 .days li.inactive{
   color: #aaa;
 }
 .days li.active{
-  color: #fff;
+  color: #FFFFFF;
 }
 .days li::before{
   position: absolute;
   content: "";
   left: 50%;
   top: 50%;
-  height: 40px;
-  width: 40px;
+  height: 35px;
+  width: 35px;
   z-index: -1;
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 .days li.active::before{
-  background: #9B59B6;
+  background: #4E944F;
 }
 .days li:not(.active):hover::before{
-  background: #f2f2f2;
+  background: #FFFFFF;
+}
+.calendars{
+    width: 372px;
+    height: 585px;
+    border: 1px solid red;
+    margin-left: 18px;
+}
+.calendars-heading{
+    position: relative;
+}
+.calendars-heading h1{
+    position: absolute;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 35px;
+    top: 34px;
+    left: 30px;
+    margin: 0;
+    color: #535353;
+}
+.iconSlider{
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    color: #A7A7A7;
+    top: 47px;
+    right: 22px;
+}
+.footer{
+    margin-left: 53px;
+}
+.footer h2{
+    font-size: 14px;
+    line-height: 16px;
+    line-height: 100%;
+    vertical-align: top;
+    color: #4E944F;
+    text-decoration: underline;
+    margin-bottom: 7px;
+}
+.footer ul li{
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7D7D7D;
+    margin-left: 25px;
+    margin-bottom: 10px;
 }
 /* hover */
 .inline{
