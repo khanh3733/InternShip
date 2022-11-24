@@ -155,7 +155,7 @@ img{
     border-right: 1px solid var(--borderColor);
     border-radius: 15px;
     padding: 0;
-    box-shadow: 0 -10px 10px 5px #ccc;
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .percentComplete-heading{
     display: flex;
@@ -348,9 +348,7 @@ img{
     .inputSearch{
         width: 65px;
     }
-    .iconnavbar{
-        display: none;
-    }
+    
     .navbar{
         position: relative;
     }
@@ -373,7 +371,11 @@ img{
         display: none;
     }
 }
-
+@media screen and (max-width:1215px){
+    .header-left p{
+        display: none;
+    }
+}
 @media screen and (max-width:1900px) {
     .name{
         display: none;
@@ -398,4 +400,25 @@ img{
     .contentUl-item{
         display: none;
     }
+}
+@media screen and (max-width:1035px) {
+    .navbar ul li{
+        margin-right: 10px;
+    }
+}
+@media screen and (max-width:858px){
+    .iconnavbar{
+        display: none;
+    }
+    .spanactive{
+        display: none;
+    }
+}
+
+.actived{
+    height: 100px;
+    transition: .3s ease;
+}
+.hide{
+    display: none;
 }
